@@ -1,0 +1,19 @@
+{
+  "name": "bilibili",
+  "version": "1.0.0",
+  "description": "electron-bilibili",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "anime",
+    "game"
+  ],
+  "author": "yuany",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.5"
+  }
+}

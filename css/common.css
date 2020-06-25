@@ -1,0 +1,52 @@
+a,html,head,body,dd,dl,dt,ul,ol,li,del,div,span,h1,h2,h3,h4,h5,h6,input,img,u,i,em,b,td,th,tr,form,iframe,
+strong,p,ins,label,legend,pre,section,nav,small,var,button,s{
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    border: 0;
+    vertical-align: bottom;
+    font-family: inherit;
+}
+img{ /*解决img嵌套时 父元素比img高的问题 因为img自动对齐方式是baseline*/
+    vertical-align: bottom;
+}
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    /* font-size: 12px; */
+}
+input,a{
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+body{
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+ul,li{
+    list-style: none;    
+}
+
+em,i,u,b{
+    font-style: normal;
+}
+
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.hidden{
+    display: none;
+}
+.clearfix::after{
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}

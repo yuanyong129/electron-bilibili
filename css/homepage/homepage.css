@@ -1,0 +1,24 @@
+.homepage{
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+.homepage .homepage-nav{
+    overflow-x: auto;
+
+}
+.homepage .homepage-nav ul{
+    white-space: nowrap;
+}  
+.homepage .homepage-nav li{
+    display: inline-block;
+    width: 10.5%;
+    text-align: center;
+    min-width: 70px;
+}
+
+.home-channel.active{
+    background: hotpink;
+    color: aliceblue;
+}

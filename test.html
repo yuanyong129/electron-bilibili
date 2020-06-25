@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            background:url("C:\\Users\\yuany\\OneDrive\\Pictures\\falcom网站\\Falcom2020.4.jpg") no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        .div1{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            background:  rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+        .div1::after{
+            content: " ";
+            position: absolute;
+            top:0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+      
+            z-index: -1;
+            filter: blur(100px);
+
+        }
+
+
+        .div2{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            min-height: 100vh;
+            background:  rgba(0, 0, 0, 0.3);
+            color: black;
+          
+        }
+        .div2::after{
+            content: " ";
+            position: absolute;
+            top:0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background:rgba(255, 255, 255, .7);
+            filter: blur(20px);
+            z-index: -1;
+
+        }
+    </style>
+</head>
+<body>
+    <div  class="div1">
+
+        dfafafafefafe
+    </div>
+    <div  class="div2">
+
+        dfafafafefafe
+    </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+body{
+    background:black;
+    background-size: cover;
+}
+.bubble{
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    margin-left: 20px;
+    font-size: 0.8rem;
+    color:white;
+    text-align: center;
+    line-height: 20px;
+}
+
+/* 顶部菜单 */
+.topbar{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background:rgba(255, 255, 255, .8);
+    /* box-shadow: 1px 1px 6px rgba(0, 0, 0, .3) ; */
+    z-index: 5;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.topbar::after{
+    content: " ";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(255, 255, 255, .4);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    filter: blur(20px);
+     z-index: -1; 
+}
+.topbar .iconfont{
+    color: hotpink;
+    line-height: 30px;
+    vertical-align: top;
+    font-size: 20px;
+}
+.topbar .descrip{
+    color: hotpink;
+    line-height: 30px;
+    vertical-align: top;
+    font-size: 14px;
+}
+.topbar div{
+    margin-right: 5px;
+    height: 30px;
+}
+.topbar span{
+    display:inline-block;
+    padding: 0 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+.topbar span:hover{
+    background: pink;
+}
+/* .grid{
+    display: block;
+    grid-template-columns: 250px  auto;
+    grid-template-areas: ".grid-left .grid-right"; 
+
+} */
+
+.grid-left{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 50px;
+    height: calc(100% - 30px);
+    background:rgba(255, 255, 255, .8);
+    /* box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .3) ; */
+    z-index: 2;
+    overflow: hidden;
+}
+.grid-right{
+    position: absolute; 
+    height: calc(100% - 30px);
+    left: 50px;
+    top:30px;
+    background: white;
+}
+
+.grid-left::after{
+    content: " ";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(255, 255, 255, .4);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -ms-filter: blur(20px);
+    -o-filter: blur(20px);
+    filter: blur(20px);
+     z-index: -1; 
+}
+.menu{
+    color: hotpink;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.5rem;
+    width: 250px;
+    /* box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, .2); */
+}
+.grid-left .menu-title.iconfont{
+   cursor: pointer;
+}
+.grid-left .menu-title.iconfont:hover{
+    background: rgba(239, 239, 239, .3);
+ }
+
+/* 用来隐藏滚动条 */
+.scroll-bar{
+    height:calc(100% - 50px);
+    width: 270px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 1px 0 0 0;
+}
+.grid-left  .title{
+    position: relative;
+    display: block;
+    line-height: 50px;
+    width: 250px;
+    cursor: pointer;
+}
+.grid-left  .title:hover{
+    background: rgba(239, 239, 239, .3);
+}
+.grid-left .iconfont{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem;
+    color: black;
+}
+.grid-left .title.active{
+    color:hotpink;
+    box-sizing: border-box;
+    box-shadow: -2px -2px 3px -1px rgba(0, 0, 0, .2),2px 2px 3px 1px rgba(0, 0, 0, .2);
+    background: rgba(239, 239, 239, .3);
+}
+.grid-left .title:active{
+    box-shadow: -2px -2px 3px -1px rgba(0, 0, 0, .2) inset,2px 2px 3px 1px rgba(0, 0, 0, .2) inset;
+
+}
+.grid-left .title.active::before{
+    content: " ";
+    position: absolute;
+    top:10px;
+    left: 0;
+    width: 3px;
+    height: 30px;
+    background:hotpink;
+    z-index: 2;
+}
+
+
+object{
+    position: absolute;
+    width: 100%;
+    height:100% ;
+}
+
+/* @media screen and (max-width:959px){
+    .grid-left{
+        width: 50px;
+    }
+    .grid-right{
+        left: 50px;
+    }
+} */
+
+
+/* 搜索框 */
+/* .search-box{
+    position: relative;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+}
+.search-box .search-text{
+    position: absolute;
+    width: 248px;
+    outline: none;
+    border: 1px solid pink;
+    border-radius: 3px;
+    top: 40px;
+    left: 0;
+    line-height: 30px;
+} */
+

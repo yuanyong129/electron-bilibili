@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BILIBILI</title>
+
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <div class="gwrap">
+        <div class="topbar"  style="-webkit-app-region: drag;-webkit-user-select: none;">
+            <i class="iconfont icon-CN_bilibili"></i>
+            <i class="descrip" >&nbsp;哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</i>
+            <div class="fr"  style="-webkit-app-region: no-drag;">
+                <span><i id = "min" class="iconfont icon-zuixiaohua"></i></span>
+                <span><i id = "max" class="iconfont icon--zuidahua"></i></span>
+                <span><i id = "close" class="iconfont icon-guanbi"></i></span>
+            </div>
+          
+        </div>
+        <div class="grid-left hidden">
+            <div id="menu" class="menu"> <i class="menu-title iconfont icon-gengduo"></i>菜单</div>
+            <div class="scroll-bar">
+                <ul>
+                    <li class="title active" title="首页"><i class=" iconfont icon-home"></i>首页 </li>
+                    <li class="title" title="频道"><i class=" iconfont icon-fenquweixuanzhong"></i>频道</li>
+                    <li class="title" title="动态"><i class=" iconfont icon-iconfontdongtai"></i>动态 <span
+                            class="bubble">12</span></li>
+                    <li class="title" title="会员购"><i class=" iconfont icon-iconfontzhizuobiaozhun0299"></i>会员购</li>
+                    <li class="title" title="搜索"><i class=" iconfont icon-sousuo"></i>搜索</li>
+                    <li class="title" title="游戏"><i class="iconfont icon-94"></i>游戏</li>
+                    <li class="title" title="消息"><i class="iconfont icon-youjian"></i>消息</li>
+                    <li class="title" title="我的"><i class=" iconfont icon-icon-test"></i>我的</li>
+                    <li class="title" title="设置"><i class=" iconfont icon-shezhi"></i>设置</li>
+                </ul>
+            </div>
+            <!-- <form action="">
+                        <div class="search-box">
+                           <span id = "search-button" class="title">
+                                <i class="iconfont icon-sousuo"></i>搜索
+                           </span>
+                            <input class="search-text hidden" type="text" id="search">
+                        </div>
+                    </form> -->
+        </div>
+        <div id="right-container" class="grid-right hidden">
+            <object data="pages/homepage.html"></object>
+        </div>
+    </div>
+    
+  
+    <script src="font/iconfont.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/changewindow.js"></script>
+    <script src="js/loadpage.js"></script>
+    <script src="render.js"></script>
+   
+</body>
+
+</html>
