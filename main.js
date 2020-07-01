@@ -13,7 +13,8 @@ function createWindow() {
     resizable: true,
    //transparent: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webSecurity:false,
     }
   })
 

@@ -8,35 +8,126 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/homepage/homepage.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css"> 
+
+    
 </head>
 <body>
-    <div class="homepage">
-        <div class="homepage-nav">
+    <div id = "homepage" class="homepage">
+        <!-- 轮播图区域 -->
+        <!-- <div class="slide-show">
+            <div class="swiper">
+                <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                        </div>
+                        <div class="swiper-slide">
+                        </div>
+                        <div class="swiper-slide">
+                        </div>
+                        <div class="swiper-slide">
+                        </div>
+                        <div class="swiper-slide">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-bullets">
+                    <div class="swiper-pagination-bullet"></div>
+                    <div class="swiper-pagination-bullet"></div>
+                    <div class="swiper-pagination-bullet"></div>
+                    <div class="swiper-pagination-bullet"></div>
+                    <div class="swiper-pagination-bullet"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 直播 -->
+        <div class="live recommend" v-cloak >
+            <div class="homepage-title">
+                <div  id="bili-live">
+                    <svg viewBox="0 0 1024 1024"><path d="M392.448 275.911111a92.416 92.416 0 1 1-184.832 0 92.416 92.416 0 0 1 184.832 0" fill="#23ADE5"></path><path d="M826.624 464.583111l-63.744 36.864v-48.64a72.206222 72.206222 0 0 0-71.68-71.936H190.72a72.192 72.192 0 0 0-71.936 71.936V748.231111a71.936 71.936 0 0 0 71.936 71.936H691.2a71.936 71.936 0 0 0 71.936-71.936v-23.808l63.488 37.888a51.2 51.2 0 0 0 76.8-44.544V508.871111a51.2 51.2 0 0 0-76.8-44.288M572.928 369.351111c79.459556 0.142222 143.985778-64.156444 144.128-143.616 0.142222-79.459556-64.156444-143.985778-143.616-144.128-79.260444-0.142222-143.701333 63.857778-144.128 143.104-0.426667 79.459556 63.644444 144.213333 143.104 144.64h0.512" fill="#48CFE5"></path><path d="M425.216 512.967111l124.16 71.936a25.6 25.6 0 0 1 0 42.496l-124.16 71.68a25.6 25.6 0 0 1-37.12-21.248V534.471111a25.6 25.6 0 0 1 37.12-21.504" fill="#FDDE80"></path></svg>
+                </div>
+                <h3>正在直播</h3>
+                <span class="live-subtitle">当前共有{{online_total}}个在线直播</span>
+                <div class="live-more fr">
+                    <span>更多</span><i class="iconfont icon-iconfontjiantou5"></i>
+                </div>
+                <div class="recommend-refresh fr">
+                    <i class="iconfont icon-shuaxin"></i>
+                </div>
+            </div>
+           
             <ul>
-                <li class="home-channel">直播</li>
-                <li class="home-channel active">推荐</li>
-                <li class="home-channel">热门</li>
-                <li class="home-channel">追番</li>
-                <li class="home-channel">影视</li>
-                <li class="home-channel">说唱区</li>
-                <li class="home-channel">618种草</li>
-                <li class="home-channel">抗击肺炎</li>
-                <li class="home-channel">小康</li>
+                <li class="video-area fl" v-for = "(item,i) in recommend_room_list">
+                    <div>
+                        <img class="video-cover" v-bind:src="item.cover" v-bind:alt="item.title">
+                        <span class="video-title">{{item.title}}</span>
+                    </div>
+                </li>
             </ul>
         </div>
-        <div class="homepage-content">
-            <div class="home-channel-content hidden">直播区</div>
-            <div class="home-channel-content ">推荐区</div>
-            <div class="home-channel-content hidden">热门区域</div>
-            <div class="home-channel-content hidden">追番区</div>
-            <div class="home-channel-content hidden">影视区</div>
-            <div class="home-channel-content hidden">说唱区</div>
-            <div class="home-channel-content hidden">618种草</div>
-            <div class="home-channel-content hidden">抗击肺炎</div>
-            <div class="home-channel-content hidden">小康</div>
-        </div>
+        <!-- 动画 -->
+        <div class="douga recommend"></div>
+        <!-- 番剧 -->
+        <div class="anime recommend"></div>
+        <!-- 国创 -->
+        <div class="guochuang recommend"></div>
+        <!-- 音乐 -->
+        <div class="music recommend"></div>
+        <!-- 舞蹈 -->
+        <div class="dance recommend"></div>
+        <!-- 游戏 -->
+        <div class="game recommend"></div>
+        <!-- 知识 -->
+        <div class="technology recommend"></div>
+        <!-- 数码 -->
+        <div class="digital recommend"></div>
+        <!-- 生活 -->
+        <div class="lift recommend"></div>
+        <!-- 鬼畜 -->
+        <div class="kichiku recommend"></div>
+        <!-- 时尚 -->
+        <div class="fashion recommend"></div>
+        <!-- 资讯 -->
+        <div class="information recommend"></div>
+        <!-- 娱乐 -->
+        <div class="ent recommend"></div>
+        <!-- 电影 -->
+        <div class="moive recommend"></div>
+        <!-- 电视剧 -->
+        <div class="teleplay recommend"></div>
+        <!-- 影视 -->
+        <div class="cinephile recommend"></div>
+        <!-- 纪录片 -->
+        <div class="documentary recommend"></div>
     </div>
     <script src="../font/iconfont.js"></script>
-    <script src="../js/homepage/changecontent.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.js"> </script> 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+    
+    <script>
+        var homePageVue = new Vue({
+            el:"#homepage",
+            data:{
+                online_total:0,
+                recommend_room_list:[]
+            },
+            mounted(){
+                axios.get("https://api.live.bilibili.com/xlive/web-interface/v1/webMain/getList?platform=web").then((response)=>{
+                    this.online_total = response.data.data.online_total;
+                    this.recommend_room_list = response.data.data.recommend_room_list;
+                    this.recommend_room_list.length = 8;
+                   // console.log(this.recommend_room_list);
+                });
+           
+            },
+            method:{
+
+            }
+        });
+    </script>
+    <script src="../js/homepage/changevideosize.js"></script>
 </body>
 </html>

@@ -1,24 +1,92 @@
-.homepage{
+/*推荐区域*/
+.recommend{
+    margin: 10px;
+}
+
+
+/*推荐区域标题*/
+.homepage-title{
     width: 100%;
-    height: 100%;
-    margin: 10px 0;
-    box-sizing: border-box;
+    height: 2rem;   
 }
-.homepage .homepage-nav{
-    overflow-x: auto;
-
-}
-.homepage .homepage-nav ul{
-    white-space: nowrap;
-}  
-.homepage .homepage-nav li{
+#bili-live{
+    height: 2rem;
+    width: 2rem;
     display: inline-block;
-    width: 10.5%;
+}
+h3{
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+.live-subtitle{
+    line-height: 2rem;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+.homepage-title .live-more{
+    height: 2rem;
+    cursor: pointer;
     text-align: center;
-    min-width: 70px;
+    width: 4rem;
+}
+.homepage-title .live-more:hover{
+    background: #eee;
+    border-radius: 5px;
+}
+.homepage-title .live-more span{
+    line-height: 2rem;
+    font-size: 1rem;
+}
+.homepage-title .live-more .iconfont{
+    font-size: 1rem;
+    line-height: 2rem;
 }
 
-.home-channel.active{
-    background: hotpink;
-    color: aliceblue;
+.homepage-title .recommend-refresh {
+    height: 2rem;
+    width: 2rem;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+.homepage-title .recommend-refresh:hover{
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.homepage-title .recommend-refresh .iconfont{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: black;
+}
+
+/* 视频区域 */
+.video-area{
+    position: relative;
+    width: 24%;
+    margin: 2px;
+    height: 10%;
+}
+.video-area .video-cover{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.video-area .video-title{
+    position: absolute;
+    background-color:rgba(90, 90, 90, 0.7);
+    height: 1rem;
+    line-height: 1rem;
+    font-size: .8rem;
+    color: white;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

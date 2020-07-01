@@ -27,6 +27,5 @@ window.onresize = function () {
         // console.log("窗口改变")
     }, 10)
 
-
 }
 
