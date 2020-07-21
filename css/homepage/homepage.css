@@ -1,6 +1,17 @@
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
 /*推荐区域*/
 .recommend{
     margin: 10px;
+}
+
+.text-overflow{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 
@@ -9,7 +20,7 @@
     width: 100%;
     height: 2rem;   
 }
-#bili-live{
+#bili-icon{
     height: 2rem;
     width: 2rem;
     display: inline-block;
@@ -25,21 +36,21 @@ h3{
     font-size: 0.8rem;
     margin-left: 10px;
 }
-.homepage-title .live-more{
+.homepage-title .more{
     height: 2rem;
     cursor: pointer;
     text-align: center;
     width: 4rem;
 }
-.homepage-title .live-more:hover{
+.homepage-title .more:hover{
     background: #eee;
     border-radius: 5px;
 }
-.homepage-title .live-more span{
+.homepage-title .more span{
     line-height: 2rem;
     font-size: 1rem;
 }
-.homepage-title .live-more .iconfont{
+.homepage-title .more .iconfont{
     font-size: 1rem;
     line-height: 2rem;
 }
@@ -62,31 +73,74 @@ h3{
     color: black;
 }
 
+
+
+
 /* 视频区域 */
-.video-area{
-    position: relative;
-    width: 24%;
-    margin: 2px;
-    height: 10%;
+.recommend-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
 }
+
+@media screen and (min-width : 1100px){
+    .recommend-container{
+        display: grid;
+        grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% ;
+    }
+}
+
+.video-area {
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
+
 .video-area .video-cover{
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     display: block;
+    border-radius: 5px;
 }
 .video-area .video-title{
     position: absolute;
     background-color:rgba(90, 90, 90, 0.7);
-    height: 1rem;
-    line-height: 1rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
     font-size: .8rem;
     color: white;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: calc(100% - 5px);
+    display: block;
+    border-radius: 3px 3px 5px 5px;
+    padding-left: 5px;
+}
+/* 视频遮罩 */
+.video-mask{
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    border-radius: 5px;
+}
+.video-area:hover .video-mask{
+    display: block;
+}
+.video-mask .up-area{
+    margin: 5px;
+    overflow: hidden;
+}
+.video-mask .up-area img{
+    width: 15%;
+    border-radius: 50%;
+    
+}
+.video-mask .up-area .up-name{
+    color: white;
+    font-size: .9rem;
+    margin-left: 5px;
+    
 }

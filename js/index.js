@@ -9,11 +9,6 @@ window.onload = function () {
     init();
     //controlLefOpen();
 }
-//获取style样式的css属性,考虑兼容;ie,火狐/谷歌;
-function getStyle(parm1, parm2) {
-    return parm1.currentStyle ? parm1.currentStyle[parm2] : getComputedStyle(parm1)[parm2];  //parm1,要改变的元素代替名;parm2,要改变的属性名
-}
-
 
 //重置搜索框
 /* function resetSearch(){

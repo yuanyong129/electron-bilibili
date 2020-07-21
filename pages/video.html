@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    video{
+        width: 800px;
+        height: 600px;
+        background-color: #bfa;
+    }
+    span{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div>
+        <span> < </span>
+        <video preload="auto" src="https://api.bilibili.com/x/player/pagelist?bvid=BV1gW411N7TD"></video>
+    </div>
+    <script src="../js/tools.js"></script>
+    <script>
+
+        var back = document.getElementsByTagName("span")[0];
+        back.addEventListener("click",function () {
+            window.history.back();
+        })
+        var str = document.location.href
+        console.log(str)
+        var aidReg = new RegExp('[0-9]{8,9}') 
+        console.log(aidReg)
+      //  console.log(str)
+        str = aidReg.exec(str)
+      //  console.log(str)
+      var url = "http://api.bilibili.com/playurl?callback=callbackfunction&aid="+str+"&page=1&platform=html5&quality=3&vtype=mp4&type=jsonp"
+      console.log(url)
+      ajax.get(url,function(data){
+          console.log(data);
+          
+      })
+
+    </script>
+</body>
+</html>

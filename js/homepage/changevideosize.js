@@ -1,27 +1,36 @@
+
+
 var resizeTimer = null;
+var width = [];
 
 window.onresize = function () {
-    // console.log(gridLeft);        
+    
     if (resizeTimer) {
         clearTimeout(resizeTimer);
     }
     resizeTimer = setTimeout(function () {
+         width[1] = document.documentElement.clientWidth;
 
-       // changeVideoCoverSize();
-    },0)
+         if( width[0] !=width[1] ){
+             width[0] = width[1];
+             changeVideoCoverSize();
+         }
+    },200)
 
 }
 
 
 function changeVideoCoverSize(){
+        
     var videoArea = document.querySelectorAll(".video-area");
+    console.log(videoArea)
+    var width = parseInt(getStyle(videoArea[0],"width"));
+    console.log( width);
     videoArea.forEach(element => {
-        element.style.height = parseInt(getStyle(element,"width"))*0.5625 +"px"; 
-        console.log( getStyle(element,"width"));      
+        element.style.height = width*0.5625 +"px";  
     });
+  
 }
-
-
 
 
 function getStyle(parm1, parm2) {

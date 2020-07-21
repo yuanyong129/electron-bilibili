@@ -18,6 +18,7 @@ input,a{
     color: #333;
     text-decoration: none;
     outline: none;
+    background: rgba(0, 0, 0, 0);
 }
 body{
     line-height: 1.6;
